@@ -10,7 +10,7 @@ export const LocationList = () => {
   const navigate = useNavigate();
 
   const getLocations = () => {
-    return getAllLocations().then(locationsFromAPI => {
+     getAllLocations().then(locationsFromAPI => {
       setLocations(locationsFromAPI)
     });
   };

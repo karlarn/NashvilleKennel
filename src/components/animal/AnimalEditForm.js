@@ -7,7 +7,7 @@ import { getAllLocations } from "../../modules/LocationManager";
 
 
 export const AnimalEditForm = () => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" });
+  const [animal, setAnimal] = useState({ name: "", breed: "", date: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [customers, setCustomers] = useState([]);
   const [locations, setLocations] = useState([])
@@ -31,6 +31,7 @@ export const AnimalEditForm = () => {
       id: animalId,
       name: animal.name,
       breed: animal.breed,
+      date: animal.date,
 	    locationId: animal.locationId,
 	    customerId: animal.customerId
     };
@@ -68,7 +69,7 @@ export const AnimalEditForm = () => {
           <div className="formgrid">
           <input
               type="date"
-              readonly="readonly"
+              readOnly="readonly"
               className="form-control"
               id="date"
               value={animal.date}
